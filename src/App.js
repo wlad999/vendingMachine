@@ -12,18 +12,18 @@ function App() {
 
   const [transactions, setTransaction] = useState(finance);
 
-  const onChangeDisplay = async (productCost) => {
+  const onChangeDisplay = (productCost) => {
     let change = transactions.display - productCost;
-    await setTransaction((transactions) => ({
+    setTransaction((transactions) => ({
       ...transactions,
       display: 0,
       change,
     }));
   };
 
-  const onPayHandler = async (coin) => {
+  const onPayHandler = (coin) => {
     if (coin === "cancel" && transactions.change === 0) {
-      await setTransaction((transactions) => ({
+      setTransaction((transactions) => ({
         ...transactions,
         wallet: [200, 100, 50],
         display: 0,
@@ -33,7 +33,7 @@ function App() {
     if (coin !== "cancel") {
       const wallet = transactions.wallet.filter((el) => el !== coin);
       const display = transactions.display + coin;
-      await setTransaction((transactions) => ({
+      setTransaction((transactions) => ({
         ...transactions,
         wallet,
         display,
@@ -43,7 +43,7 @@ function App() {
     if (coin === "cancel" && transactions.display) {
       const wallet = [transactions.display];
       const display = 0;
-      await setTransaction((transactions) => ({
+      setTransaction((transactions) => ({
         ...transactions,
         wallet,
         display,

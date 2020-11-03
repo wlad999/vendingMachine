@@ -5,6 +5,7 @@
 	background-size: contain;
 	height: 560px;
 	width: 400px;
+	min-width: 400px;
 	position: relative;
 }
 .machine-display {
