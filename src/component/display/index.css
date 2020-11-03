@@ -1,0 +1,12 @@
+.display {
+	background-image: url('../../assets/display-bg.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 39px;
+	width: 72px;
+	color: red;
+	display: flex;
+	align-items: center;
+	
+}

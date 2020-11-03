@@ -1,0 +1,35 @@
+.slots {
+	padding-top: 11px;
+	width: 242px;
+    height: 346px;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	
+}
+.box {
+	width: 46px;
+	height: 60px;
+	position: relative;
+}
+.slotNumber {
+	width: 18px;
+	height: 18px;
+	border-radius: 50%;
+	background: black;
+	border: 2px solid #757575;
+	font-size: 12px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	bottom: 0;
+	left: 14px;
+	color: white;
+}
+.img{
+	width: auto;
+	height: 40px;
+	position: absolute;
+	}

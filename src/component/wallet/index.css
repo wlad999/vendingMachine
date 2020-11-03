@@ -1,0 +1,36 @@
+.wallet {
+	display: flex;
+	flex-direction: column;
+	margin-left: 30px;
+}
+
+.pocket {
+	background: #CFCEC9;
+	border: 4px solid#161616;
+	border-radius: 10px;
+	width: 250px;
+	height: 75px;
+	margin-bottom: 250px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.coin {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	margin: 5px;
+	cursor: pointer;
+}
+.change {
+	background: #CFCEC9;
+	border: 4px solid#161616;
+	border-radius: 10px;
+	width: 250px;
+	height: 75px;
+	margin-bottom: 250px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
