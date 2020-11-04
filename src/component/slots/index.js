@@ -1,14 +1,9 @@
 import React from "react";
 import "./index.css";
-import bomba from "../../assets/bomba.png";
-import mars from "../../assets/mars.png";
-import snickers from "../../assets/snickers.png";
+import shortid from "shortid";
+import { products } from "../../services/data";
 
-const shortid = require("shortid");
-
-const products = { bomba, mars, snickers };
-
-const Slots = ({ slots, display }) => {
+const Slots = ({ slots }) => {
   let box = slots.map((el) => {
     let images = [];
     let left = 3;
@@ -35,9 +30,7 @@ const Slots = ({ slots, display }) => {
     return (
       <div className="box" key={shortid.generate()}>
         {images}
-        <div className="slotNumber" key={shortid.generate()}>
-          {el.id}
-        </div>
+        <div className="slotNumber">{el.id}</div>
       </div>
     );
   });

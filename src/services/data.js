@@ -54,3 +54,4 @@ export const productsArr = [
   { id: 54, name: null, quantity: null },
   { id: 55, name: null, quantity: null },
 ];
+export const buttonsArr = [1, 2, 3, 4, 5, 6, 7, 8, 9, "C", 0, "OK"];

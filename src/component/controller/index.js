@@ -1,28 +1,29 @@
-import React, { useMemo } from "react";
+import React, { useEffect, useState } from "react";
 import "./index.css";
 import shortid from "shortid";
+import { buttonsArr } from "../../services/data";
 
 const Controller = ({ getProduct }) => {
-  const buttonsArr = [1, 2, 3, 4, 5, 6, 7, 8, 9, "C", 0, "OK"];
+  const [position, setPositons] = useState("");
+  useEffect(() => {
+    console.log("POSITION", position);
+  }, [position]);
 
-  let data = useMemo(() => ({ position: "" }), []);
-
-  const controllerHandler = (el) => {
+  const controllerHandler = (button) => {
     if (
-      data.position.length < 2 &&
-      el <= 5 &&
-      el !== "C" &&
-      el !== 0 &&
-      el !== "OK"
+      position.length < 2 &&
+      button <= 5 &&
+      button !== "C" &&
+      button !== 0 &&
+      button !== "OK"
     ) {
-      data.position = data.position + el;
-    } else if (el === "C") {
-      data.position = "";
-    } else if (data.position.length === 2 && el === "OK") {
-      getProduct(data.position);
-      console.log("OK", data.position);
+      setPositons((position) => position + button);
+    } else if (button === "C") {
+      setPositons("");
+    } else if (position.length === 2 && button === "OK") {
+      getProduct(position);
+      console.log("OK", position);
     }
-    console.log("DATA in controller", data);
   };
 
   const buttons = buttonsArr.map((el) => (
