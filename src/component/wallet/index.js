@@ -1,11 +1,6 @@
 import React from "react";
 import "./index.css";
-import twoHundred from "../../assets/coin-200.png";
-import oneHundred from "../../assets/coin-100.png";
-import fifty from "../../assets/coin-50.png";
-import twenty from "../../assets/coin-20.png";
-import ten from "../../assets/coin-10.png";
-import five from "../../assets/coin-5.png";
+import { coin } from "../../services/data";
 
 const shortid = require("shortid");
 shortid.generate();
@@ -14,7 +9,6 @@ const Wallet = ({ finance, setTransaction }) => {
   let { wallet: arrCoin, change } = finance;
 
   let box = arrCoin.map((el) => {
-    let coin = el === 200 ? twoHundred : el === 100 ? oneHundred : fifty;
     let payMoney = () => {
       setTransaction(el);
     };
@@ -22,7 +16,7 @@ const Wallet = ({ finance, setTransaction }) => {
     return (
       <img
         className="coin"
-        src={coin}
+        src={coin[el]}
         alt={el}
         onClick={payMoney}
         key={shortid.generate()}
@@ -45,20 +39,8 @@ const Wallet = ({ finance, setTransaction }) => {
   } while (rest > 0);
 
   let letGetChange = changeCoin.map((el) => {
-    let coin =
-      el === 200
-        ? twoHundred
-        : el === 100
-        ? oneHundred
-        : el === 50
-        ? fifty
-        : el === 20
-        ? twenty
-        : el === 10
-        ? ten
-        : five;
     return (
-      <img className="coin" src={coin} alt={el} key={shortid.generate()} />
+      <img className="coin" src={coin[el]} alt={el} key={shortid.generate()} />
     );
   });
 

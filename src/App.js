@@ -2,14 +2,9 @@ import React, { useState } from "react";
 import "./App.css";
 import Machine from "./component/machine";
 import Wallet from "./component/wallet";
+import { finance } from "./services/data";
 
 function App() {
-  let finance = {
-    display: 0,
-    wallet: [200, 100, 50],
-    change: 0,
-  };
-
   const [transactions, setTransaction] = useState(finance);
 
   const onChangeDisplay = (productCost) => {
