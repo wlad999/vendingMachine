@@ -19,3 +19,5 @@ export const coin = {
   10: ten,
   5: five,
 };
+
+export const availableChange = Object.keys(coin).reverse((el) => Number(el));

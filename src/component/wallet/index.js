@@ -1,9 +1,7 @@
 import React from "react";
 import "./index.css";
-import { coin } from "../../services/data";
-
-const shortid = require("shortid");
-shortid.generate();
+import { coin, availableChange } from "../../services/data";
+import shortid from "shortid";
 
 const Wallet = ({ finance, setTransaction }) => {
   let { wallet: arrCoin, change } = finance;
@@ -24,7 +22,6 @@ const Wallet = ({ finance, setTransaction }) => {
     );
   });
 
-  const availableChange = [200, 100, 50, 20, 10, 5];
   const changeCoin = [];
   let rest = change;
   let i = 0;
