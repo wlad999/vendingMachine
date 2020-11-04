@@ -1,8 +1,5 @@
 import React from "react";
-import bomba from "../../assets/bomba.png";
-import mars from "../../assets/mars.png";
-import snickers from "../../assets/snickers.png";
-const products = { bomba, mars, snickers };
+import { products } from "../../services/data";
 
 const GetProduct = ({ pickUpProduct }) => {
   return (

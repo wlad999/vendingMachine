@@ -1,7 +1,6 @@
 import React, { useMemo } from "react";
 import "./index.css";
-
-const shortid = require("shortid");
+import shortid from "shortid";
 
 const Controller = ({ getProduct }) => {
   const buttonsArr = [1, 2, 3, 4, 5, 6, 7, 8, 9, "C", 0, "OK"];
